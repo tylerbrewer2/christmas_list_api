@@ -24,7 +24,7 @@ class UserTest < ActiveSupport::TestCase
     it 'cannot be created without an email' do
       user = User.new(
         first_name: 'Tyler',
-        last_name: 'Brewer',
+        last_name: 'Brewer'
       )
 
       refute user.valid?, 'Expected user to not be created without an email'

@@ -9,7 +9,7 @@ class ItemTest < ActiveSupport::TestCase
       item = Item.new(
         name: 'Canyon Bike',
         url: 'https://www.canyon.com',
-        price: 10000.00,
+        price: 10_000.00
       )
       item.list = @list
 
@@ -19,7 +19,7 @@ class ItemTest < ActiveSupport::TestCase
     it 'cannot be created without a name' do
       item = Item.new(
         url: 'https://www.canyon.com',
-        price: 10000.00,
+        price: 10_000.00
       )
       item.list = @list
 
@@ -29,7 +29,7 @@ class ItemTest < ActiveSupport::TestCase
     it 'cannot be created without a url' do
       item = Item.new(
         name: 'Canyon Bike',
-        price: 10000.00,
+        price: 10_000.00
       )
       item.list = @list
 
@@ -40,7 +40,7 @@ class ItemTest < ActiveSupport::TestCase
       item = Item.new(
         name: 'Canyon Bike',
         url: 'canyon.com',
-        price: 10000.00,
+        price: 10_000.00
       )
       item.list = @list
 
@@ -51,14 +51,14 @@ class ItemTest < ActiveSupport::TestCase
       item_with_https = Item.new(
         name: 'Canyon Bike',
         url: 'https://www.canyon.com',
-        price: 10000.00,
+        price: 10_000.00
       )
       item_with_https.list = @list
 
       item_with_http = Item.new(
         name: 'Canyon Bike',
         url: 'http://www.canyon.com',
-        price: 10000.00,
+        price: 10_000.00
       )
       item_with_http.list = @list
 

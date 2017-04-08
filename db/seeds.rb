@@ -4,20 +4,20 @@ user = User.create(
   email: 'tylerbrewer02@gmail.com'
 )
 
-puts "Created New User"
+puts 'Created New User'
 
 group = Group.create(
   name: 'Cool Group'
 )
 
-puts "Created New Group"
+puts 'Created New Group'
 
 list = List.create(
   group_id: group.id,
-  user_id: user.id,
+  user_id: user.id
 )
 
-puts "Created New List"
+puts 'Created New List'
 
 5.times do |index|
   list.items << Item.create(
@@ -27,5 +27,5 @@ puts "Created New List"
     list_id: list.id
   )
 
-  puts "Created New Item"
+  puts 'Created New Item'
 end
