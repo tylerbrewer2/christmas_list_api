@@ -4,6 +4,7 @@ class ItemTest < ActiveSupport::TestCase
   before do
     @list = FactoryGirl.create(:list)
   end
+
   describe 'validations' do
     it 'can be created with valid attributes' do
       item = Item.new(
