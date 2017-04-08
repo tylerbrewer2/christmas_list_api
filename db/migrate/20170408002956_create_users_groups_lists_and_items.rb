@@ -13,8 +13,8 @@ class CreateUsersGroupsListsAndItems < ActiveRecord::Migration[5.0]
     end
 
     create_table :lists do |t|
-      t.belongs_to :groups, index: true
-      t.belongs_to :users, index: true
+      t.belongs_to :group, index: true
+      t.belongs_to :user, index: true
       t.timestamps
     end
 
@@ -22,7 +22,7 @@ class CreateUsersGroupsListsAndItems < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :url
       t.decimal :price
-      t.belongs_to :lists, index: true
+      t.belongs_to :list, index: true
       t.timestamps
     end
   end
